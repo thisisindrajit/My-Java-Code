@@ -1,9 +1,9 @@
-package org.example.creational_patterns.factory_pattern;
+package org.example.lld.creational_patterns.factory_pattern;
 
 import java.util.*;
-import org.example.creational_patterns.factory_pattern.factories.HTMLUILibraryFactory;
-import org.example.creational_patterns.factory_pattern.factories.WindowsUILibraryFactory;
-import org.example.creational_patterns.factory_pattern.factories.UILibraryFactory;
+import org.example.lld.creational_patterns.factory_pattern.factories.HTMLUILibraryFactory;
+import org.example.lld.creational_patterns.factory_pattern.factories.WindowsUILibraryFactory;
+import org.example.lld.creational_patterns.factory_pattern.factories.UILibraryFactory;
 
 public class Application {
     private static UILibraryFactory factory;
