@@ -1,10 +1,12 @@
-package org.example.lld.creational_patterns.factory_pattern.products;
+package org.example.lld.creational_patterns.abstract_factory_pattern.products;
 
-public class HTMLUIButton implements UIButton {
+public class HTMLButton implements Button {
+    @Override
     public void paint() {
         System.out.println("HTML button painted");
     }
 
+    @Override
     public void click() {
         System.out.println("HTML button clicked");
     }
