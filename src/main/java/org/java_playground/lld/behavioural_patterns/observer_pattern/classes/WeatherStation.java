@@ -28,7 +28,13 @@ public class WeatherStation implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(temperature, humidity); // Using the PULL method to get the latest data from the subject to the observer instead of the PUSH method that would send data directly.
+            observer.update(temperature, humidity); // Using the PUSH method that would send data directly from Subject to Observer. There is also PULL method that is implemented in the following manner:
+            // To use the pull method, modify the Observer interface so that its update() method does not take parameters. Instead, observers will receive a notification and then pull the latest data from the WeatherStation (subject) by calling its getter methods.
+            // Steps:
+            // 1. Change Observer.update(int temperature, int humidity) to Observer.update().
+            // 2. In WeatherStation.notifyObservers(), call observer.update() without parameters.
+            // 3. Add getter methods for temperature and humidity in WeatherStation.
+            // 4. Observers should hold a reference to the WeatherStation and call its getters in their update() method.
         }
     }
 
