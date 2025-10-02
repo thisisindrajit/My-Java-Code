@@ -2,7 +2,7 @@ package org.java_playground.lld.creational_patterns.singleton_pattern;
 
 public class Singleton {
 //    //  Thread safe way - DCL (Double-Checked Locking) - Using synchronized and volatile
-///**
+//    /**
 //     * Why is it recommended to use `volatile` and not `final` while declaring the singletonObj?
 //     *
 //     * - The `volatile` keyword is used instead of `final` because the `singletonObj` field needs to be mutable and thread-safe.
