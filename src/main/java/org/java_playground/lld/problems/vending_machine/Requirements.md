@@ -2,28 +2,27 @@
 
 ## Operations
 - Must handle different product types and track remaining stock
-  - Each product has a id, name, price, category
+  - Each product has an sku, name, price, category, count
   - Inventory must track the list of products and remaining quantities for products
-- Must handle different payment methods (Cash [Coins only], Card, UPI)
-- Must move between different states (Idle, ItemSelection, PaymentPending, Dispensing, Maintenance)
+- Must handle different payment methods (Cash, Card)
+- Must move between different states
 
 ## Key Components
 - VendingMachine (Single Instance)
+- Inventory (Single Instance)
 - Item
-- Inventory
 - State
   - IdleState
-  - ItemSelectionState
-  - PaymentPendingState
+  - ItemSelectedState
+  - PaymentProcessingState
   - DispensingState
-  - MaintenanceState
+  - OutOfStockState
 - Payment
     - Cash
     - Card
-    - Upi
 
 ## Approach
-- Singleton pattern for VendingMachine
+- Singleton pattern for VendingMachine and Inventory
 - State pattern for handling different states
 - Strategy pattern for handling different payment methods
 
